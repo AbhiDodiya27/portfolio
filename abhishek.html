@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+  <!-- Internal CSS -->
+  <style>
+    /* Reset and Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f4f4f4;
+    }
+    
+    /* Container */
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      overflow: hidden;
+    }
+    
+    /* Navigation */
+    nav {
+      background: #333;
+      color: #fff;
+    }
+    
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+    }
+    
+    .logo {
+      font-size: 1.8em;
+      margin-left: 20px;
+    }
+    
+    .nav-links {
+      list-style: none;
+      margin-right: 20px;
+    }
+    
+    .nav-links li {
+      display: inline;
+      margin-left: 20px;
+    }
+    
+    .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    
+    .nav-links li a:hover {
+      color: #f4f4f4;
+    }
+    
+    /* Hero Section */
+    .hero {
+      background: url('hero-bg.jpg') no-repeat center center/cover;
+      height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }
+    
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .hero .container {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .hero h2 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    
+    /* Sections */
+    section {
+      padding: 60px 0;
+    }
+    
+    section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2.5em;
+      color: #333;
+    }
+    
+    section p {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+      font-size: 1.1em;
+    }
+    
+    /* Portfolio Grid */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 20px;
+      padding: 20px;
+    }
+    
+    .portfolio-item {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    
+    .portfolio-item img {
+      width: 100%;
+      display: block;
+    }
+    
+    .portfolio-item h3 {
+      margin: 15px 0 10px;
+      font-size: 1.5em;
+      color: #333;
+    }
+    
+    .portfolio-item p {
+      padding: 0 15px 15px;
+      font-size: 1em;
+      color: #666;
+    }
+    
+    /* Contact Form */
+    form {
+      max-width: 600px;
+      margin: auto;
+    }
+    
+    form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    form button {
+      display: block;
+      width: 100%;
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 15px;
+      font-size: 1em;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    
+    form button:hover {
+      background: #555;
+    }
+    
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation and Hero Section -->
+  <header>
+    <nav>
+      <div class="container nav-container">
+        <h1 class="logo">My Portfolio</h1>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="hero">
+      <div class="container">
+        <h2>Hi, I'm [Your Name]</h2>
+        <p>A passionate developer &amp; designer</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt, urna eget mattis commodo, sapien nisi fermentum purus, non cursus magna nisi eget nunc.
+      </p>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <div class="container">
+      <h2>My Work</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img src="project1.jpg" alt="Project 1">
+          <h3>Project Title 1</h3>
+          <p>Short description about the project.</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="project2.jpg" alt="Project 2">
+          <h3>Project Title 2</h3>
+          <p>Short description about the project.</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="project3.jpg" alt="Project 3">
+          <h3>Project Title 3</h3>
+          <p>Short description about the project.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form action="#" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
