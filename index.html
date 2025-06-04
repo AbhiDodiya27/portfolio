@@ -2,283 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Portfolio</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
-  <!-- Internal CSS -->
-  <style>
-    /* Reset and Global Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: 'Open Sans', sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background-color: #fdc6c6;
-    }
-    
-    /* Container */
-    .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: auto;
-      overflow: hidden;
-    }
-    
-    /* Navigation */
-    nav {
-      background: #333;
-      color: #fff;
-    }
-    
-    .nav-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 0;
-    }
-    
-    .logo {
-      font-size: 1.8em;
-      margin-left: 20px;
-    }
-    
-    .nav-links {
-      list-style: none;
-      margin-right: 20px;
-    }
-    
-    .nav-links li {
-      display: inline;
-      margin-left: 20px;
-    }
-    
-    .nav-links li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-    
-    .nav-links li a:hover {
-      color: #f4f4f4;
-    }
-    
-    /* Hero Section */
-    .hero {
-      background: url('hero-bg.jpg') no-repeat center center/cover;
-      height: 100vh;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #fff;
-    }
-    
-    .hero::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
-    }
-    
-    .hero .container {
-      position: relative;
-      z-index: 1;
-    }
-    
-    .hero h2 {
-      font-size: 3em;
-      margin-bottom: 10px;
-    }
-    
-    /* Sections */
-    section {
-      padding: 60px 0;
-    }
-    
-    section h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 2.5em;
-      color: #333;
-    }
-    
-    section p {
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto 20px auto;
-      font-size: 1.1em;
-    }
-    
-    /* Portfolio Grid */
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      grid-gap: 20px;
-      padding: 20px;
-    }
-    
-    .portfolio-item {
-      background: #fff;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
-    
-    .portfolio-item img {
-      width: 100%;
-      display: block;
-    }
-    
-    .portfolio-item h3 {
-      margin: 15px 0 10px;
-      font-size: 1.5em;
-      color: #333;
-    }
-    
-    .portfolio-item p {
-      padding: 0 15px 15px;
-      font-size: 1em;
-      color: #666;
-    }
-    
-    /* Contact Form */
-    form {
-      max-width: 600px;
-      margin: auto;
-    }
-    
-    form label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-    
-    form input,
-    form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    
-    form button {
-      display: block;
-      width: 100%;
-      background: #333;
-      color: #fff;
-      border: none;
-      padding: 15px;
-      font-size: 1em;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    
-    form button:hover {
-      background: #555;
-    }
-    
-    /* Footer */
-    footer {
-      background: #333;
-      color: #fff;
-      text-align: center;
-      padding: 20px 0;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhishek Dodiya | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Navigation and Hero Section -->
   <header>
     <nav>
-      <div class="container nav-container">
-        <h1 class="logo">My Portfolio</h1>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#portfolio">Work</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
+      <h1>Abhishek Dodiya</h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="resume.pdf" target="_blank">Resume</a></li>
+      </ul>
     </nav>
-    <div class="hero">
-      <div class="container">
-        <h2>Hi, I'm Abhishek Dodiya</h2>
-        <p>A passionate developer &amp; designer</p>
-      </div>
-    </div>
   </header>
 
-  <!-- About Section -->
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt, urna eget mattis commodo, sapien nisi fermentum purus, non cursus magna nisi eget nunc.
-      </p>
-    </div>
-  </section>
-
-  <!-- Portfolio Section -->
-  <section id="portfolio">
-    <div class="container">
-      <h2>My Work</h2>
-      <div class="portfolio-grid">
-        <div class="portfolio-item">
-          <img src="project1.jpg" alt="Project 1">
-          <h3>Project Title 1</h3>
-          <p>Short description about the project.</p>
-        </div>
-        <div class="portfolio-item">
-          <img src="project2.jpg" alt="Project 2">
-          <h3>Project Title 2</h3>
-          <p>Short description about the project.</p>
-        </div>
-        <div class="portfolio-item">
-          <img src="project3.jpg" alt="Project 3">
-          <h3>Project Title 3</h3>
-          <p>Short description about the project.</p>
-        </div>
+  <section id="home">
+    <div class="intro">
+      <h2>Hi, I'm Abhishek</h2>
+      <p>Computer Science Master's Student | Full-Stack Developer | Android Enthusiast</p>
+      <div class="socials">
+        <a href="https://github.com/AbhiDodiya27" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/abhishek-dodiya-00b915256" target="_blank">LinkedIn</a>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <form action="#" method="post">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required />
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a passionate computer science graduate student at Long Island University with a background in web and Android development. Skilled in Java, Python, PHP, JavaScript, and MySQL.</p>
+    <h3>Skills</h3>
+    <ul>
+      <li>Java, Python, PHP, C/C++</li>
+      <li>HTML, CSS, JavaScript</li>
+      <li>Android Studio, Firebase</li>
+      <li>MySQL, Node.js</li>
+    </ul>
+  </section>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Greater Fools Blog</h3>
+      <p>Full-stack blogging platform using React, Node.js, Express, MySQL. Includes CRUD, auth, and responsive UI.</p>
+      <a href="https://github.com/LIUSpring2025/GreaterFools-SP25" target="_blank">View on GitHub</a>
+    </div>
+    <div class="project">
+      <h3>Smart Class (Android)</h3>
+      <p>Android app for online class management using MySQL and Android Studio.</p>
+    </div>
+    <div class="project">
+      <h3>Call Announcer & Blocker</h3>
+      <p>Android app that announces callers and blocks spam calls.</p>
+    </div>
+    <div class="project">
+      <h3>Laundromat Simulation</h3>
+      <p>Concurrency simulation of smart laundromat with process synchronization and customer management.</p>
     </div>
   </section>
 
-  <!-- Footer -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
   <footer>
-    <div class="container">
-      <p>&copy; 2025 [Your Name]. All rights reserved.</p>
-    </div>
+    <p>&copy; 2025 Abhishek Dodiya</p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
+
